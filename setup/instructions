@@ -1,0 +1,5 @@
+# asa creen ENV conda cu python 3.6
+conda create --name img2sound --file condaenv.txt
+
+# asa instalam packetele python necesare
+pip install -r requirements.txt
