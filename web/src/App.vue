@@ -1,14 +1,18 @@
 <template>
   <div id="app">
     <div class="container">
-        <img :src="imageSrc" v-if="imageSrc" class="image" style="width:600px;height=400px">
-        <input @change="uploadImage" type="file" name="sound_file" accept="sound/*">
-        <audio controls v-if="audioSrc">
-          <source :src="audioSrc" type="audio/wav">
-        </audio>
-        xalex
+        <label for="sound_file">Upload audio file so see</label>
+        <input @change="uploadImage" type="file" name="sound_file" accept="audio/*">
+    </div>
+    <div class="container">
+      <img :src="imageSrc" v-if="imageSrc" class="image" style="width:600px;height=400px">
+    </div>
+    <div class="container">
+      <audio controls v-if="audioSrc">
+        <source :src="audioSrc" type="audio/wav">
+      </audio>
     </div>  
-    <div>
+    <div class="container" v-if="debug">
       <p>
       file_id: {{ sound_file_id}}
       </p>
