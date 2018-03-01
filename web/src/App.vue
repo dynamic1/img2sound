@@ -48,7 +48,7 @@ export default {
         // this.imageSrc = e.target.result;
       // };
       axios
-        .post("//localhost:5000/api/v1/spectrogram", data, {
+        .post("/api/v1/spectrogram", data, {
           headers: {
             "Content-Type": "multipart/form-data",
             "Access-Control-Allow-Origin": "*"
@@ -60,8 +60,8 @@ export default {
           console.log("sound_file_id=" + response.data.file_id)
           
           this.sound_file_id = response.data.file_id;
-          this.imageSrc = "http://localhost:5000/api/v1/spectrogram?file_id=" + this.sound_file_id
-          this.audioSrc = "http://localhost:5000/uploads/" + this.sound_file_id + ".wav"
+          this.imageSrc = "/api/v1/spectrogram?file_id=" + this.sound_file_id
+          this.audioSrc = "/uploads/" + this.sound_file_id + ".wav"
           console.log("imageSrc: " + this.imageSrc)
           // reader.readAsDataURL(files[0]);
         })
