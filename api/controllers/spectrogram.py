@@ -4,7 +4,7 @@ import hashlib
 
 import librosa.core as lc
 import matplotlib
-matplotlib.use('TkAgg')
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 #mpl.use('TkAgg')
 
